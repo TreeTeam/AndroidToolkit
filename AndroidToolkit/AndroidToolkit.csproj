@@ -156,6 +156,15 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="jqueryui\index.html" />
+    <Content Include="jqueryui\jquery-ui.css" />
+    <Content Include="jqueryui\jquery-ui.js" />
+    <Content Include="jqueryui\jquery-ui.min.css" />
+    <Content Include="jqueryui\jquery-ui.min.js" />
+    <Content Include="jqueryui\jquery-ui.structure.css" />
+    <Content Include="jqueryui\jquery-ui.structure.min.css" />
+    <Content Include="jqueryui\jquery-ui.theme.css" />
+    <Content Include="jqueryui\jquery-ui.theme.min.css" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

@@ -11,7 +11,14 @@ namespace AndroidToolkit
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+            }
+        }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

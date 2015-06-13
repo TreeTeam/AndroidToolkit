@@ -13,7 +13,12 @@
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+<link href="jqueryui/jquery-ui.css" rel="stylesheet">
+     <script src="addon/edit/matchbrackets.js"></script>
+        <script src="addon/selection/active-line.js"></script>
+        <script src="mode/javascript/javascript.js"></script>
+        <script src="lib/codemirror.js"></script>
+    <link rel="stylesheet" href="lib/codemirror.css">
 </head>
 <body>
     <form runat="server">
@@ -36,6 +41,7 @@
                 <asp:ScriptReference Name="WebFormsBundle" />
                 <%--Site Scripts--%>
             </Scripts>
+
         </asp:ScriptManager>
 
         <div class="navbar navbar-inverse navbar-fixed-top">
@@ -82,5 +88,68 @@
             </footer>
         </div>
     </form>
+
+
+    <script src="jqueryui/external/jquery/jquery.js"></script>
+<script src="jqueryui/jquery-ui.js"></script>
+<script>
+
+    $("#accordion").accordion();
+
+
+    $("#button").button();
+    $("#radioset").buttonset();
+
+
+
+    $("#tabs").tabs();
+
+
+
+    $("#dialog").dialog({
+        autoOpen: false,
+        width: 400,
+        buttons: [
+            {
+                text: "Ok",
+                click: function () {
+                    $(this).dialog("close");
+                }
+            },
+            {
+                text: "Cancel",
+                click: function () {
+                    $(this).dialog("close");
+                }
+            }
+        ]
+    });
+
+
+
+    // Hover states on the static widgets
+    $("#dialog-link, #icons li").hover(
+        function () {
+            $(this).addClass("ui-state-hover");
+        },
+        function () {
+            $(this).removeClass("ui-state-hover");
+        }
+    );
+</script>
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+            lineNumbers: true,
+            styleActiveLine: true,
+            matchBrackets: true
+        });
+
+        var choice = document.location.search &&
+                     decodeURIComponent(document.location.search.slice(1));
+        if (choice) {
+            input.value = choice;
+            editor.setOption("theme", choice);
+        }
+</script>
 </body>
 </html>
